@@ -6,6 +6,9 @@
       target="_blank">
       <el-button type="primary">Hello Element UI</el-button>
     </a>
+    
+    <p>Vuex: {{ name }}</p>
+
     <h1 class="color-red">Red Color</h1>
     <ul>
       <li>
@@ -71,12 +74,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'HelloWorld',
   data() {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  computed: {
+    ...mapGetters(['name'])
   }
 }
 </script>

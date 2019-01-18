@@ -3,7 +3,6 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -68,6 +67,7 @@ module.exports = {
   externals: {
     'vue': 'Vue',
     'vue-router': 'VueRouter',
+    'vuex':'Vuex'
   },
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
